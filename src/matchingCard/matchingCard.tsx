@@ -8,7 +8,7 @@ interface MatchingCardProps {
   isFlipped : boolean;
   handleSelect: (index: number) => void;
 }
-function MatchingCard({id, content, matched, isFlipped, handleSelect, index}: MatchingCardProps) {
+function MatchingCard({content, matched, isFlipped, handleSelect, index}: MatchingCardProps) {
 
   // set state hook for isFlipped
 
@@ -19,7 +19,7 @@ function MatchingCard({id, content, matched, isFlipped, handleSelect, index}: Ma
 
 
   return (
-    <div className={`card ${isFlipped || matched ? 'flipped' : ''} ${matched ? 'in-active' : ''}`} onClick={handleFlip}>
+    <div className={`card ${isFlipped || matched ? 'flipped' : ''} ${matched ? 'in-active' : ''}`} onClick={handleFlip}>
         <div className="card-face card-front">
             <img src={questionLogo} alt={matched?.toString()}/>
         </div>
